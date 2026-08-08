@@ -413,6 +413,14 @@ nav ul li a {
   background-color: #234e3d;
   overflow: hidden;
   border-radius: 5px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .menu-card img {
