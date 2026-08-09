@@ -229,7 +229,7 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     height: auto;
-    height: 80vh;
+    height: 90vh;
     padding: 3.75rem var(--space-sm);
     gap: 40px;
     text-align: center;
