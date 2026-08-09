@@ -10,7 +10,9 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-
+html {
+  scroll-padding-top: 70px;
+}
 body {
   background-color: white;
 }
@@ -303,13 +305,16 @@ nav ul li a {
   .featured-title {
     font-size: 3rem;
   }
+
   .featured-paragraph {
     font-size: 1rem;
     max-width: 700px;
   }
+
   .featured-bottom {
     gap: 0.5rem;
   }
+
   .featured-img {
     width: 250px;
     height: 230px;
@@ -341,11 +346,13 @@ nav ul li a {
   .featured-title {
     font-size: 2rem;
   }
+
   .featured-paragraph {
     font-size: 12px;
     line-height: 15px;
     max-width: 300px;
   }
+
   .featured-bottom {
     display: flex;
     justify-content: center;
