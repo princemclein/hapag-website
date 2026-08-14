@@ -550,18 +550,16 @@ nav ul li a {
 }
 
 /* About Section */
-#about {
-  height: 200vh;
-}
-
 .about-header {
   position: relative;
 }
 
 .about-header img {
   display: block;
-  width: 1521px;
-  height: 550px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1521 / 550;
+  object-fit: cover;
 }
 
 .about-hero {
@@ -571,11 +569,14 @@ nav ul li a {
   transform: translate(-50%, -50%);
   color: #f8f3e9;
   text-align: center;
+  width: 90%;
 }
 
-.about-header {
+.about-hero-title {
+  position: relative;
   font-size: 4rem;
   text-shadow: 2px 3px 7px rgba(0, 0, 0, 0.6);
+  margin: 0;
 }
 
 /* About Content */
@@ -622,12 +623,14 @@ nav ul li a {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
 }
 
 .belief-card {
   flex: 1;
+  min-width: 220px;
   max-width: 300px;
 }
 
@@ -641,4 +644,72 @@ nav ul li a {
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
+}
+
+/* Smaller desktop / tablet */
+@media (max-width: 1024px) {
+  .about-story,
+  .about-beliefs {
+    padding: 3rem 4rem;
+  }
+
+  .about-hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 780px) {
+  .about-story,
+  .about-beliefs {
+    padding: 2.5rem 2rem;
+  }
+
+  .about-story-title,
+  .about-beliefs-title {
+    font-size: 2.25rem;
+  }
+
+  .belief-cards {
+    gap: 2rem;
+  }
+
+  .belief-card {
+    flex: 1 1 45%;
+    max-width: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .about-story,
+  .about-beliefs {
+    padding: 2rem 1.25rem;
+  }
+
+  .about-story-paragraph {
+    font-size: 13px;
+  }
+
+  .about-story-title,
+  .about-beliefs-title {
+    font-size: 1.75rem;
+  }
+
+  .about-hero-title {
+    font-size: 2rem;
+  }
+
+  .belief-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .belief-card {
+    flex: 1 1 100%;
+    max-width: none;
+  }
+  .belief-card p {
+    font-size: 13px;
+  }
 }
