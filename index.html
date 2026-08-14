@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>HAPAG</title>
   </head>
@@ -15,7 +19,7 @@
           <li><a href="#hero">HOME</a></li>
           <li><a href="#menu">MENU</a></li>
           <li><a href="#about">ABOUT</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="menu-toggle">☰</button>
@@ -82,10 +86,12 @@
 
         <div class="menu-cards">
           <article class="menu-card">
-            <img
-              src="/assets/menu/appetizers/shanghai.jpg"
-              alt="Lumpiang Shanghai"
-            />
+            <div class="menu-img-wrap">
+              <img
+                src="/assets/menu/appetizers/shanghai.jpg"
+                alt="Lumpiang Shanghai"
+              />
+            </div>
             <div class="menu-info">
               <p class="dish-title">Lumpiang Shanghai</p>
               <p class="dish-description">
@@ -96,43 +102,47 @@
           </article>
 
           <article class="menu-card">
-            <img
-              src="/assets/menu/noodles/pancit-palabok.jpg"
-              alt="Pancit Palabok"
-            />
-            <div class="menu-info">
-              <p class="dish-title">Pancit Palabok</p>
-              <p class="dish-description">
-                Rice noodles topped with savory shrimp sauce and traditional
-                garnishes.
-              </p>
-              <span class="menu-price">₱180</span>
+            <div class="menu-img-wrap">
+              <img src="/assets/menu/desserts/halo-halo.jpg" alt="Halo-Halo" />
             </div>
-          </article>
-
-          <article class="menu-card">
-            <img src="/assets/menu/desserts/halo-halo.jpg" alt="Halo-halo" />
             <div class="menu-info">
               <p class="dish-title">Halo-Halo</p>
               <p class="dish-description">
-                Shaved ice, sweet fruits, beans, milk, and creamy ube ice cream.
+                Classic Filipino shaved ice dessert layered with sweetened
+                fruits, jellies, beans, and creamy milk.
               </p>
-              <span class="menu-price">₱150</span>
+              <span class="menu-price">₱120</span>
             </div>
           </article>
 
           <article class="menu-card">
-            <img
-              src="/assets/menu/main/pork-sinigang.jpg"
-              alt="Pork Sinigang"
-            />
+            <div class="menu-img-wrap">
+              <img src="/assets/menu/main/adobo.jpg" alt="Adobong Manok" />
+            </div>
             <div class="menu-info">
-              <p class="dish-title">Pork Sinigang</p>
+              <p class="dish-title">Adobong Manok</p>
               <p class="dish-description">
-                Tender pork in a comforting sour tamarind broth with fresh
-                vegetables.
+                Tender chicken slow-cooked to perfection, with a rich, savory
+                flavor and comforting Filipino taste.
               </p>
-              <span class="menu-price">₱220</span>
+              <span class="menu-price">₱120</span>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-img-wrap">
+              <img
+                src="/assets/menu/noodles/pancit-bihon.jpg"
+                alt="Pancit Bihon"
+              />
+            </div>
+            <div class="menu-info">
+              <p class="dish-title">Pancit Bihon</p>
+              <p class="dish-description">
+                Stir-fried rice noodles with a savory, flavorful taste, packed
+                with classic Filipino comfort.
+              </p>
+              <span class="menu-price">₱120</span>
             </div>
           </article>
         </div>
@@ -195,6 +205,152 @@
           </div>
         </div>
       </section>
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="contact-content">
+          <div class="contact-intro">
+            <h2 class="contact-title">Let's Get In Touch</h2>
+            <p class="contact-subtitle">
+              Have a question, a reservation request, or just want to say hi?
+              We'd love to hear from you.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <h3>Visit Us</h3>
+                <p>123 Maginhawa Street, Quezon City, Philippines</p>
+              </div>
+
+              <div class="contact-info-item">
+                <h3>Call Us</h3>
+                <p>+63 912 345 6789</p>
+              </div>
+
+              <div class="contact-info-item">
+                <h3>Email Us</h3>
+                <p>hello@hapag.com</p>
+              </div>
+
+              <div class="contact-info-item">
+                <h3>Hours</h3>
+                <p>Mon–Sun: 10:00 AM – 9:00 PM</p>
+              </div>
+
+              <div class="contact-socials">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="TikTok"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form
+              class="contact-form"
+              action="https://formspree.io/f/mdendgbz"
+              method="post"
+            >
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Juan Dela Cruz"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="juan@email.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Tell us what's on your mind..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="contact-submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="footer-content">
+          <div class="footer-top">
+            <!-- Brand -->
+            <div class="footer-brand">
+              <h2 class="footer-logo">HAPAG</h2>
+              <p class="footer-tagline">
+                Rooted in tradition. Reimagined for today.
+              </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-contact">
+              <h3>Get In Touch</h3>
+              <ul>
+                <li>123 Maginhawa Street, Olongapo City</li>
+                <li>+63 912 345 6789</li>
+                <li>hapag-restaurant@hapag.com</li>
+              </ul>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-socials">
+              <h3>Follow Us</h3>
+              <div class="footer-socials-icons">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="TikTok"
+                  ><i class="fab fa-tiktok"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <div class="footer-bottom">
+            <p>&copy; 2026 HAPAG. All rights reserved.</p>
+            <p>Made with care in the Philippines.</p>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="/js/script.js"></script>
   </body>
