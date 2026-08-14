@@ -3,10 +3,383 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Menu | HAPAG</title>
     <link rel="stylesheet" href="/css/menu.css" />
-    <title>Hapag Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
-    <header><h1 class="header-title">Hapag Menu</h1></header>
+    <!-- Full Menu Page -->
+    <main id="full-menu">
+      <!-- Page Header -->
+      <div class="full-menu-header">
+        <a href="/index.html" class="back-link">
+          <span class="arrow-back">←</span> Back to Home
+        </a>
+        <h1 class="full-menu-title">Our Full Menu</h1>
+        <p class="full-menu-subtitle">
+          Every dish rooted in tradition, made to be shared.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="menu-filters" id="menu-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="main">Main</button>
+        <button class="filter-btn" data-filter="noodles">Noodles</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+        <button class="filter-btn" data-filter="appetizers">Appetizers</button>
+        <button class="filter-btn" data-filter="beverages">Beverages</button>
+      </div>
+
+      <!-- Full Menu Grid -->
+      <div class="full-menu-grid" id="full-menu-grid">
+        <!-- Main Courses -->
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/main/adobo.jpg" alt="Chicken Adobo" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Chicken Adobo</p>
+            <p class="dish-description">
+              Classic braised chicken in soy, vinegar, and garlic.
+            </p>
+            <span class="menu-price">₱190</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/main/kare-kare.jpg" alt="Kare-Kare" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Kare-Kare</p>
+            <p class="dish-description">
+              Oxtail and vegetables simmered in a rich peanut sauce, served with
+              bagoong.
+            </p>
+            <span class="menu-price">₱280</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/main/pork-sinigang.jpg"
+              alt="Sinigang na Baboy"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Sinigang na Baboy</p>
+            <p class="dish-description">
+              Tender pork in a comforting sour tamarind broth with fresh
+              vegetables.
+            </p>
+            <span class="menu-price">₱220</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/main/bulalo.jpg" alt="Bulalo" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Bulalo</p>
+            <p class="dish-description">
+              Beef shank and bone marrow slow-cooked in a clear, savory broth.
+            </p>
+            <span class="menu-price">₱260</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/main/lechon-kawali.jpg"
+              alt="Lechon Kawali"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Lechon Kawali</p>
+            <p class="dish-description">
+              Deep-fried crispy pork belly served with a tangy vinegar dip.
+            </p>
+            <span class="menu-price">₱240</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="main">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/main/bicol-express.jpg"
+              alt="Bicol Express"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Bicol Express</p>
+            <p class="dish-description">
+              Pork simmered in coconut milk, chili, and shrimp paste for a
+              creamy, spicy kick.
+            </p>
+            <span class="menu-price">₱210</span>
+          </div>
+        </article>
+
+        <!-- Noodles -->
+        <article class="menu-card" data-category="noodles">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/noodles/pancit-canton.jpg"
+              alt="Pancit Canton"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Pancit Canton</p>
+            <p class="dish-description">
+              Stir-fried egg noodles with vegetables and choice of meat.
+            </p>
+            <span class="menu-price">₱170</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="noodles">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/noodles/pancit-bihon.jpg"
+              alt="Pancit Bihon"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Pancit Bihon</p>
+            <p class="dish-description">
+              Thin rice noodles stir-fried with vegetables, chicken, and soy
+              sauce.
+            </p>
+            <span class="menu-price">₱160</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="noodles">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/noodles/pancit-malabon.jpg"
+              alt="Pancit Malabon"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Pancit Malabon</p>
+            <p class="dish-description">
+              Thick rice noodles in a savory shrimp sauce, topped with seafood
+              and pork.
+            </p>
+            <span class="menu-price">₱200</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="noodles">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/noodles/pancit-palabok.jpg"
+              alt="Pancit Palabok"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Pancit Palabok</p>
+            <p class="dish-description">
+              Rice noodles topped with savory shrimp sauce and traditional
+              garnishes.
+            </p>
+            <span class="menu-price">₱180</span>
+          </div>
+        </article>
+
+        <!-- Desserts -->
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/desserts/halo-halo.jpg" alt="Halo-halo" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Halo-Halo</p>
+            <p class="dish-description">
+              Shaved ice, sweet fruits, beans, milk, and creamy ube ice cream.
+            </p>
+            <span class="menu-price">₱150</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/desserts/leche-flan.jpg" alt="Leche Flan" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Leche Flan</p>
+            <p class="dish-description">
+              Smooth caramel custard made with egg yolks and condensed milk.
+            </p>
+            <span class="menu-price">₱90</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/desserts/bibingka.jpg" alt="Bibingka" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Bibingka</p>
+            <p class="dish-description">
+              Baked rice cake with a soft, spongy texture, topped with cheese
+              and salted egg.
+            </p>
+            <span class="menu-price">₱100</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="desserts">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/desserts/buko-pandan.jpg"
+              alt="Buko Pandan"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Buko Pandan</p>
+            <p class="dish-description">
+              Sweet young coconut strips and pandan-flavored gelatin in creamy
+              milk.
+            </p>
+            <span class="menu-price">₱110</span>
+          </div>
+        </article>
+
+        <!-- Appetizers -->
+        <article class="menu-card" data-category="appetizers">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/appetizers/shanghai.jpg"
+              alt="Lumpiang Shanghai"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Lumpiang Shanghai</p>
+            <p class="dish-description">
+              Crispy pork spring rolls served with sweet chili sauce.
+            </p>
+            <span class="menu-price">₱120</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="appetizers">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/appetizers/tokwa-baboy.jpg"
+              alt="Tokwa't Baboy"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Tokwa't Baboy</p>
+            <p class="dish-description">
+              Fried tofu and boiled pork ears in a tangy soy-vinegar dressing.
+            </p>
+            <span class="menu-price">₱140</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="appetizers">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/appetizers/calamares.jpg" alt="Calamares" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Calamares</p>
+            <p class="dish-description">
+              Crispy fried squid rings served with garlic mayo dip.
+            </p>
+            <span class="menu-price">₱150</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="appetizers">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/appetizers/ukoy.jpg" alt="Ukoy" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Ukoy</p>
+            <p class="dish-description">
+              Crispy shrimp and vegetable fritters, best served with vinegar
+              dip.
+            </p>
+            <span class="menu-price">₱130</span>
+          </div>
+        </article>
+
+        <!-- Beverages -->
+        <article class="menu-card" data-category="beverages">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/beverages/calamansi-juice.jpg"
+              alt="Calamansi Juice"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Calamansi Juice</p>
+            <p class="dish-description">
+              Refreshing Filipino citrus juice, served ice cold.
+            </p>
+            <span class="menu-price">₱70</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="beverages">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/beverages/sagot-gulaman.jpg"
+              alt="Sago't Gulaman"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Sago't Gulaman</p>
+            <p class="dish-description">
+              Sweet brown sugar drink with chewy sago pearls and gulaman.
+            </p>
+            <span class="menu-price">₱70</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="beverages">
+          <div class="menu-img-wrap">
+            <img
+              src="/assets/menu/beverages/kapeng-barako.jpg"
+              alt="Kapeng Barako"
+            />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Kapeng Barako</p>
+            <p class="dish-description">
+              Bold, full-bodied traditional Batangas coffee.
+            </p>
+            <span class="menu-price">₱80</span>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="beverages">
+          <div class="menu-img-wrap">
+            <img src="/assets/menu/beverages/iced-tea.jpg" alt="Iced Tea" />
+          </div>
+          <div class="menu-info">
+            <p class="dish-title">Iced Tea</p>
+            <p class="dish-description">
+              House-brewed iced tea, lightly sweetened.
+            </p>
+            <span class="menu-price">₱60</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Empty state, shown by JS when a filter has zero matches -->
+      <p class="no-results" id="no-results" hidden>
+        No dishes found in this category.
+      </p>
+    </main>
   </body>
 </html>

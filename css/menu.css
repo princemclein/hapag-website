@@ -1,20 +1,242 @@
 * {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  background-color: white;
+  color: #3a3a3a;
 }
 
-header {
-  background-color: #234e3d;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+#full-menu {
+  max-width: 1182px;
   margin: 0 auto;
-  height: 250px;
+  padding: 3rem 1.5rem 5rem;
 }
 
-.header-title {
-  font-size: 3.5rem;
+/* Page Header */
+.full-menu-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.back-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #234e3d;
+  font-size: 0.95rem;
+  font-weight: 550;
+}
+
+.arrow-back {
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover .arrow-back {
+  transform: translateX(-4px);
+}
+
+.full-menu-title {
+  color: #234e3d;
+  font-size: 2.6rem;
+  margin: 0 0 0.75rem;
+}
+
+.full-menu-subtitle {
+  font-size: 1.05rem;
+  color: #3a3a3a;
+  opacity: 0.75;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Filter Buttons */
+.menu-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  border: 1px solid #234e3d;
+  background-color: transparent;
+  color: #234e3d;
+  font-size: 0.9rem;
+  font-weight: 550;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: rgba(35, 78, 61, 0.08);
+}
+
+/* JS should toggle this class on the clicked button */
+.filter-btn.active {
+  background-color: #234e3d;
   color: #f8f3e9;
+}
+
+.filter-btn:focus-visible {
+  outline: 2px solid #234e3d;
+  outline-offset: 3px;
+}
+
+/* Menu Grid */
+.full-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* JS should set this on menu-card elements not matching the active filter */
+.menu-card.hidden {
+  display: none;
+}
+
+.menu-card {
+  background-color: #f8f3e9;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.menu-img-wrap {
+  overflow: hidden;
+  height: 220px;
+}
+
+.menu-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.menu-card:hover img {
+  transform: scale(1.06);
+}
+
+.menu-info {
+  padding: 1.1rem;
+}
+
+.dish-title {
+  font-size: 17px;
+  font-weight: 550;
+  margin: 0 0 0.5rem;
+  color: #234e3d;
+}
+
+.dish-description {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 1rem;
+}
+
+.menu-price {
+  display: inline-block;
+  background-color: #234e3d;
+  color: #f8f3e9;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+/* Empty state */
+.no-results {
+  text-align: center;
+  color: #3a3a3a;
+  opacity: 0.6;
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* Smaller desktop / tablet */
+@media (max-width: 1024px) {
+  #full-menu {
+    padding: 2.5rem 1.5rem 4rem;
+  }
+
+  .full-menu-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 780px) {
+  .full-menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .menu-img-wrap {
+    height: 180px;
+  }
+
+  .filter-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  #full-menu {
+    padding: 2rem 1.25rem 3rem;
+  }
+
+  .full-menu-title {
+    font-size: 1.8rem;
+  }
+
+  .full-menu-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .menu-filters {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.9rem;
+  }
+
+  .full-menu-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .menu-img-wrap {
+    height: 200px;
+  }
 }
