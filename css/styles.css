@@ -185,13 +185,16 @@ nav ul li a:active {
   }
 
   nav {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    top: 75px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    max-height: calc(100vh - 75px);
+    height: 100vh;
+    max-height: none;
     background-color: #1c4434;
     overflow-y: auto;
     transform: translateY(-10px);
@@ -199,45 +202,73 @@ nav ul li a:active {
     visibility: hidden;
     pointer-events: none;
     transition:
-      transform 0.3s ease,
-      opacity 0.3s ease,
-      visibility 0.3s;
+      transform 0.35s ease,
+      opacity 0.35s ease,
+      visibility 0.35s;
     max-width: none;
   }
 
   nav ul {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 20px 16px;
+    align-items: center;
+    padding: 0;
     margin: 0;
-    font-size: 1rem;
+    gap: 2.25rem;
+    counter-reset: nav-item;
   }
 
   nav ul li {
     width: 100%;
-    text-align: left;
+    text-align: center;
+    counter-increment: nav-item;
   }
 
   nav ul li a {
-    display: block;
-    width: 100%;
-    padding: 15px 18px;
+    position: relative;
+    display: inline-block;
+    padding: 4px 0;
     color: #f8f3e9;
     text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: color 0.25s ease;
+  }
+
+  nav ul li a::before {
+    content: "0" counter(nav-item);
+    display: block;
+    font-size: 0.65rem;
     letter-spacing: 2px;
-    border-radius: 10px;
-    transition: background-color 0.2s ease;
+    color: #f8f3e9;
+    opacity: 0.4;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
   }
 
   nav ul li a::after {
-    display: none;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 0;
+    height: 1.5px;
+    background-color: #f8f3e9;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
   }
 
   nav ul li a:hover,
   nav ul li a:focus,
   nav ul li a.active {
-    background-color: rgba(248, 243, 233, 0.12);
+    color: #f8f3e9;
+  }
+
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
+    width: 60%;
   }
 
   nav.active {
